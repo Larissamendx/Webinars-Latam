@@ -9,6 +9,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
     align-self: center;
     margin: 30px 0px;
+    margin: 0 auto;
 
 h2 { 
     font-size: 35px;
