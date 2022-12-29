@@ -7,6 +7,8 @@ export const Container = styled.div`
     border-radius: 92px;
     display:flex;
     justify-content: space-evenly;
+    align-self: center;
+    margin: 30px 0px;
 
 .date {
     color: #ffff;

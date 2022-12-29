@@ -2,7 +2,7 @@ import {Container} from './styles';
 
 export default function Card(props) {
   return (
-    <Container background={'blue' || 'gray'}>
+    <Container>
     <div>
       <h2>{props.Title}</h2>
       <p>{props.text}</p>
