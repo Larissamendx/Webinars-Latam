@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   .todo {
     display: flex;
-    width: 100%;
+    @media (max-width: 520px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   .imagem{
     display: flex;
@@ -23,14 +26,16 @@ export const Container = styled.div`
     }
     @media (max-width: 520px) {
       padding: 20px;
-    }
-    @media (max-width: 400px) {
-      padding: 0px;
+      margin: 0 auto;
     }
     img{
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      @media (max-width: 520px) {
+        width: 200px;
+        height: 200px;
+      }
     }
     .texto{
       margin-top: 10px;
@@ -38,5 +43,9 @@ export const Container = styled.div`
       text-align: center;
       font-size: 14px;
       color: #fff;
+      width: 100px;
+      @media (max-width: 910px) {
+        font-size: 10px;
+    }
     }
 `

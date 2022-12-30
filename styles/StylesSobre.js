@@ -21,13 +21,13 @@ export const Container = styled.div`
       padding-top: 450px;
       @media (max-width: 910px) {
         padding-top: 230px;
-    }
-    @media (max-width: 610px) {
-      padding-top: 200px;
-    }
-    @media (max-width: 520px) {
-      padding-top: 150px;
-  }
+      }
+      @media (max-width: 610px) {
+        padding-top: 200px;
+      }
+      @media (max-width: 520px) {
+        padding-top: 150px;
+      }
     }
     .registrese {
       text-align: center;
@@ -54,40 +54,72 @@ export const Container = styled.div`
         @media (max-width: 410px) {
           font-size: 10px;
         }
-        @media (max-width: 410px) {
-          font-size: 10px;
-        }
-      }
-
-      .linhaTodo{
-        display: flex;
-        flex-direction: row ;
-        margin-top: 20px;
-        gap: 270px;
       }
       .linha{
         background-color: #fff;
         border-radius: 50px;
-        width: 45%;
         height: 30px;
+        width: 550px;
         font-family: 'Roboto';
         font-size: 18px;
         display: flex;
         align-items: center;
         padding-left: 20px;
         color: ${(props) => (props.background === 'blue' ? '#2B4A79' : props.background === 'gray' ? '#82A0C4' : props.background === 'red' ? '#BF0D0D' : props.background === 'green' ? '#008E88' : props.background === 'orange' ? '#ED7203' : '#7F337F')};
+        @media (max-width: 910px) {
+          width: 350px;
+        }
+        @media (max-width: 610px) {
+          width: 280px;
+          font-size: 15px;
+        }
+        @media (max-width: 520px) {
+          width: 100px;
+          margin: 0 auto;
+        }
       }
       .linha2{
         background-color: #fff;
         border-radius: 50px;
-        width: 11%;
         height: 30px;
+        width: 150px;
         font-family: 'Roboto';
         font-size: 18px;
         display: flex;
-        align-items: center;
         padding-left: 20px;
+        align-items: center;
         color: ${(props) => (props.background === 'blue' ? '#2B4A79' : props.background === 'gray' ? '#82A0C4' : props.background === 'red' ? '#BF0D0D' : props.background === 'green' ? '#008E88' : props.background === 'orange' ? '#ED7203' : '#7F337F')};
+        @media (max-width: 910px) {
+          margin-left: -20px;
+        }
+        @media (max-width: 610px) {
+          width: 100px;
+          font-size: 15px;
+        }
+        @media (max-width: 520px) {
+          margin: 0 auto;
+        }
+    }
+    .imagemContainer{
+      display: flex;
+      gap: 10px;
+      @media (max-width: 520px) {
+        flex-direction: column;
+      }
+    }
+    .invitadosContainer{
+      width: 80%;
+      @media (max-width: 520px) {
+        width: 100%;
+      }
+    }
+    .mediacionContainer{
+      @media (max-width: 620px) {
+        width: 100px;
+      }
+      @media (max-width: 520px) {
+        margin-top: 50px;
+        width: 100%;
       }
     }
 `
