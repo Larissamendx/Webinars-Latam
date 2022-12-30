@@ -18,6 +18,15 @@ export const Container = styled.div`
     :nth-child(4){
       width: 80%;
     }
+    @media (max-width: 910px) {
+      padding: 30px;
+    }
+    @media (max-width: 520px) {
+      padding: 20px;
+    }
+    @media (max-width: 400px) {
+      padding: 0px;
+    }
     img{
       width: 100px;
       height: 100px;

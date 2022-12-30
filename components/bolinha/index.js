@@ -8,10 +8,10 @@ export default function Bolinha(props) {
       <div className='footer'>
         <p>{props.text}</p>
 
-        <div className='linhaTodo'>
+        {/* <div className='linhaTodo'>
           <div className='linha'>INVITADOS</div>
           <div className='linha2'>MEDIACIÓN</div>
-        </div>
+        </div> */}
 
         <div className='todo'>
           <div className="imagem">

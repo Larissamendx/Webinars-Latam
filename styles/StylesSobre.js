@@ -4,11 +4,30 @@ export const Banner = styled.div`
     background-color: #2B4A79;
     height: 300px;
     padding-top: 50px;
+    @media (max-width: 910px) {
+      height: 200px;
+    }
+    @media (max-width: 610px) {
+      height: 150px;
+    }
+    @media (max-width: 520px) {
+      height: 100px;
+    } 
+    
     
 `
 export const Container = styled.div`
     .teste{
       padding-top: 450px;
+      @media (max-width: 910px) {
+        padding-top: 230px;
+    }
+    @media (max-width: 610px) {
+      padding-top: 200px;
+    }
+    @media (max-width: 520px) {
+      padding-top: 150px;
+  }
     }
     .registrese {
       text-align: center;
@@ -21,10 +40,23 @@ export const Container = styled.div`
       margin-top: 150px;
       padding: 50px;
 
+      @media (max-width: 610px) {
+        margin-top: 50px;
+      }
+
       p{
         font-family: 'Roboto';
         font-size: 20px;
         color: #fff;
+        @media (max-width: 610px) {
+          font-size: 15px;
+        }
+        @media (max-width: 410px) {
+          font-size: 10px;
+        }
+        @media (max-width: 410px) {
+          font-size: 10px;
+        }
       }
 
       .linhaTodo{

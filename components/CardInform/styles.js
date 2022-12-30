@@ -11,6 +11,17 @@ export const Container = styled.div`
     margin: 30px 0px;
     margin: 0 auto;
 
+    @media (max-width: 910px) {
+        width: 600px;
+    }
+    @media (max-width: 610px) {
+        width: 400px;
+        margin-top: -60px;
+    }
+    @media (max-width: 410px) {
+        width: 350px;
+    }
+
 h2 { 
     font-size: 35px;
     font-weight: 500;
@@ -18,6 +29,15 @@ h2 {
     color: #ffff;
     margin-top: 21px;
     text-transform: uppercase;
+    @media (max-width: 910px) {
+        font-size: 25px;
+    }
+    @media (max-width: 610px) {
+        font-size: 18px;
+    }
+    @media (max-width: 410px) {
+        font-size: 12px;
+    }
 }
 
 
