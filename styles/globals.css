@@ -2,6 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -11,11 +13,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 h1,
@@ -31,8 +28,7 @@ ul {
 }
 
 button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+  border: none;
 }
 @font-face {
   font-family: "Roboto-ThinItalic";
@@ -64,11 +60,13 @@ button {
   src: url("../fonts/Roboto-Italic.ttf") format("opentype");
 }
 
-@font-face {
-  font-family: "LFT-Etica-SemiBold-Italic";
-  font-style: "italic";
-  src: local("LFT_Etica_SemiBoldItalic"),
-    url("../fonts/LFT_Etica_SemiboldItalic.otf") format("opentype");
+ {
+  /*@font-face {
+      font-family: "LFT-Etica-SemiBold-Italic";
+      font-style: "italic";
+      src: local("LFT_Etica_SemiBoldItalic"),
+      url("../fonts/LFT_Etica_SemiboldItalic.otf") format("opentype");
+  }*/
 }
 
 @font-face {
@@ -81,4 +79,35 @@ button {
   font-family: "Roboto-Black";
   font-style: "normal";
   src: url("../fonts/Roboto-Black.ttf") format("opentype");
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 20px;
+  height: 20px;
+  border: 0.1em solid currentColor;
+  border-radius: 5px;
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  filter: opacity(0);
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  transition: 120ms filter ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-image: url("../assets/check-box.svg");
+}
+
+input[type="checkbox"]:checked::before {
+  filter: opacity(100%);
 }
