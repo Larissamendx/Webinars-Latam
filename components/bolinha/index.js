@@ -1,6 +1,6 @@
 import { Container } from './styles';
 import Image from "next/image";
-import Teste from "../../assets/img.jpg";
+import Teste from "../../assets/stevam.png";
 
 export default function Bolinha(props) {
   return (

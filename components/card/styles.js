@@ -21,6 +21,17 @@ export const Container = styled.button`
 		border-radius: 180px;
 		margin: 0 32px;
 	}
+	@media (max-width:450px) {
+	display: flex;
+	flex-direction: column;
+
+	p, h2 {
+		text-align: center;
+	}
+	p {
+		font-size: 15px;
+	}
+}
 	
 	:hover {
 		filter: brightness(1.2);
@@ -54,4 +65,5 @@ export const Container = styled.button`
 		font-family: 'Roboto';
 		color: #ffff;
 	}
+
 `

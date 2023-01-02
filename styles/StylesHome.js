@@ -64,4 +64,7 @@ export const Course = styled.div`
 	flex-direction: column;
 	padding-bottom: 40px;
 	padding-top: 100px;
+
+
 `
+

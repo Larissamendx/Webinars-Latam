@@ -1,4 +1,3 @@
-import '../styles/StylesGlobals'
 import '../styles/globals.css'
 import { ThemeProvider } from 'styled-components'
 import { CourseProvider } from '../context/CourseContext'
