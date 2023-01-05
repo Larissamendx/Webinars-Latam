@@ -43,7 +43,30 @@ export const Form = styled.form`
       display: flex;
       flex-direction: column;
     }
+    label {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+    h6 {
+      font-size: 18px;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors[props.color]};
+    margin-top: 3px;
+    padding-bottom: 10px;
+    }
+    .input {
+      display: flex;
+      margin-top: -40px;
+
+      span {
+        padding-left: 10px;
+        color: ${(props) => props.theme.colors[props.color]};
+      }
+    }
+    }
+    
   }
+
   .form-footer {
     display: flex;
     flex-direction: column;

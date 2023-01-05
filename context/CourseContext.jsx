@@ -9,8 +9,8 @@ function CourseProvider({children}) {
   
   const aboutCourses = [
     {
-      title: 'Informes ESG y la doble materialidad',
-      subtitle: 'Invitados: Arturo Rodriguez (IFRS), Evodio Sánchez (CEMEFI)',
+      title: 'Reportes ESG: Panorama, Tendencias y Metodologías (Standards/Doble Materialiad/Distintitvo ESG)',
+      subtitle: ' Invitados: Arturo Rodriguez (IFRS), Evodio Sánchez (CEMEFI)',
       description: (
         <div>
           <p>
@@ -39,19 +39,21 @@ function CourseProvider({children}) {
       guests: [
         {
           name: 'Evodio Sánchez',
-          group: 'CEMEFI',
+          group: 'Director de Responsabilidad Social Empresarial, Cemefi',
           photo: evodio,
+          link: "https://www.cemefi.org/"
         },
         {
-          name: 'Arturo Rodriguez',
-          group: 'IFRS',
+          name: 'Arturo Rodríguez',
+          group: 'Senior Market Leader: Ibero-America, IFRS Foundation',
           photo: arturo,
         }
+        
       ]
     },
     {
       title: 'Finanzas Sostenibles & “Sustainability-linked bonds (SBL)”',
-      subtitle: 'Invitados: DNV, ProCoReef',
+      subtitle: 'Invitados: ProCoReef',
       description: (
         <div>
           <p>

@@ -16,8 +16,8 @@ export default function Bolinha(props) {
               props.guests && props.guests.map((guest, id )=> {
                 return(
                   <div className="imagem" key={id}>
-                    <Image src={guest.photo} alt="guest" className="logo" />
-                    <div className='texto'>
+                    <Image src={guest.photo} href={guest.link} alt="guest" className="logo" />
+                    <div className='texto' href={guest.link}>
                       {guest.name} <br />
                       {guest.group}
                     </div>
@@ -33,7 +33,7 @@ export default function Bolinha(props) {
               <Image src={Teste} alt="logo" className="logo" />
               <div className='texto'>
                 Estevam Pereira <br />
-                Grupo report
+                Director, grupo report
               </div>
             </div>
           </div>
