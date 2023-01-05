@@ -18,9 +18,10 @@ export default function Home() {
           <Image src={Shape} alt="fundo" className="shape" priority={1} />
         </div>
         <div className="text">
-          <h1>
-            CONEXIÓN ESG <span>Diálogos Latinoamericanos</span>
-          </h1>
+          <h1>Serie de Webinars</h1>
+          <h2>
+            CONEXIÓN ESG <span>Diálogos Latam</span>
+          </h2>
           <p>
             La Conexión ESG | Latam Diálogos es una serie de 5 Webinars, con eventos online gratuitos
             para discutir temas como Estrategia ESG, Reportes ESG, Metodologías, Indicadores,

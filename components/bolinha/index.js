@@ -33,7 +33,7 @@ export default function Bolinha(props) {
               <Image src={Teste} alt="logo" className="logo" />
               <div className='texto'>
                 Estevam Pereira <br />
-                Diretor del grupo report
+                Grupo report
               </div>
             </div>
           </div>

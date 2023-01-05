@@ -53,8 +53,8 @@ export const Container = styled.div`
   .date {
     color: grey;
     font-size: 25px;
-    font-family: 'Roboto';
     font-weight: 800;
+    margin-bottom: 16px;
 
     @media (max-width: 910px) {
       font-size: 15px;
@@ -66,24 +66,9 @@ export const Container = styled.div`
       font-size: 7px;
     }
   }
-  .date2 {
+  .time {
     color: grey;
     font-size: 25px;
-    font-family: 'Roboto';
-    @media (max-width: 910px) {
-      font-size: 15px;
-    }
-    @media (max-width: 610px) {
-      font-size: 10px;
-    }
-    @media (max-width: 520px) {
-      font-size: 7px;
-    }
-  }
-  .date3 {
-    color: grey;
-    font-size: 25px;
-    font-family: 'Roboto';
     @media (max-width: 910px) {
       font-size: 15px;
     }
@@ -96,7 +81,6 @@ export const Container = styled.div`
   }
   h2 { 
     font-size: 50px;
-    font-family: 'Roboto';
     color: ${(props) => props.theme.colors[props.color]};
     padding: 0px 45px 30px 45px;
     text-align: center;

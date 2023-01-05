@@ -32,9 +32,7 @@ export const Container = styled.a`
 	h2 { 
 		font-size: 35px;
 		font-weight: 500;
-		font-family: 'Roboto';
 		color: #ffff;
-		text-transform: uppercase;
 		@media (max-width: 910px) {
 			font-size: 25px;
 		}

@@ -4,6 +4,7 @@ export const Banner = styled.div`
   background-color: ${(props) => props.theme.colors[props.color]};
   height: 350px;
   padding-top: 50px;
+  font-family: 'Roboto-Regular';
   @media (max-width: 910px) {
     height: 250px;
   }
@@ -43,7 +44,6 @@ export const Container = styled.div`
     }
 
     p{
-      font-family: 'Roboto';
       font-size: 20px;
       color: #fff;
       @media (max-width: 610px) {
@@ -57,7 +57,6 @@ export const Container = styled.div`
       background-color: #fff;
       border-radius: 50px;
       height: 30px;
-      font-family: 'Roboto';
       font-size: 18px;
       display: flex;
       align-items: center;
@@ -68,7 +67,6 @@ export const Container = styled.div`
       background-color: #fff;
       border-radius: 50px;
       height: 30px;
-      font-family: 'Roboto';
       font-size: 18px;
       display: flex;
       padding-left: 20px;

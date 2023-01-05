@@ -1,39 +1,7 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-p,
-ul {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-button {
-  border: none;
-}
 @font-face {
-  font-family: "Roboto-ThinItalic";
-  font-style: "italic";
-  src: url("../fonts/Roboto-ThinItalic.ttf") format("opentype");
+  font-family: "Roboto-Thin";
+  font-style: "normal";
+  src: url("../fonts/Roboto-Thin.ttf") format("opentype");
 }
 
 @font-face {
@@ -79,6 +47,40 @@ button {
   font-family: "Roboto-Black";
   font-style: "normal";
   src: url("../fonts/Roboto-Black.ttf") format("opentype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Roboto-Medium";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
 }
 
 input[type="checkbox"] {

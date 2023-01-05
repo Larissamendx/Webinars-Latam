@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.button`
 	background-color: ${(props) => props.theme.colors[props.background]};
+	filter: ${(props) => props.disabled && 'opacity(0.5)'};
 	height: 160px;
 	width: 900px;
 	border-radius: 92px;
@@ -23,7 +24,7 @@ export const Container = styled.button`
 	}
 	
 	:hover {
-		filter: brightness(1.2);
+		filter: ${(props) => !props.disabled && 'brightness(1.2)'};
 	}
 
 	.text {
@@ -38,20 +39,18 @@ export const Container = styled.button`
 		align-items: center;
 		justify-content: space-between;
 		font-size: 30px;
-		font-weight: 800;
-		font-family: 'Roboto';
+		font-family: 'Roboto-Bold';
 	}
 	h2 { 
 		font-size: 30px;
 		font-weight: 500;
-		font-family: 'Roboto';
 		color: #ffff;
 	}
 
 	p {
 		font-size: 20px;
 		font-weight: 300;
-		font-family: 'Roboto';
 		color: #ffff;
+		margin-top: 8px;
 	}
 `

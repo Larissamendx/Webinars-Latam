@@ -16,8 +16,7 @@ export default function Sobre() {
         <Bola
           title={currentCourse.title}
           date={currentCourse.date}
-          date2={currentCourse.timeMex + ". Ciudad de México (MEX)"}
-          date3={currentCourse.timeBr + ". 13 p.m. Brasília (BRA)"}
+          time={currentCourse.time}
           color={currentCourse.color}
         />
       </Banner>

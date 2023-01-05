@@ -2,14 +2,19 @@ import Head from 'next/head'
 import { React, useState } from 'react'
 // import styles from '../styles/Home.module.css';
 import emailjs from '@emailjs/browser'
-import { Container, Form } from './styles'
+import { Container, Form } from './styles';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Formulario(props) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [pais, setPais] = useState('')
   const [empresa, setEmpresa] = useState('')
+  const [posto, setPosto] = useState('')
 
+  const notify = () => toast.success("¡Registro completado!");
+  
   function sendEmail(e) {
     e.preventDefault()
     alert('teste')
@@ -18,7 +23,8 @@ export default function Formulario(props) {
       from_name: name,
       email: email,
       pais: pais,
-      empresa: empresa
+      empresa: empresa,
+      posto: posto
     }
 
     emailjs
@@ -31,10 +37,12 @@ export default function Formulario(props) {
       .then(
         response => {
           console.log(response.text, 'Email enviado')
+          notify()
           setEmail('')
           setName('')
           setPais('')
           setEmpresa('')
+          setPosto('')
         },
         error => {
           console.log(error.text)
@@ -44,6 +52,7 @@ export default function Formulario(props) {
 
   return (
     <Container color={props.color} id="form">
+      <ToastContainer />
       <Form onSubmit={sendEmail} color={props.color} buttonColor={props.buttonColor}>
         <div className='content'>
           <h2>Formulario de inscripción</h2>
@@ -90,6 +99,16 @@ export default function Formulario(props) {
                 required
               />
             </label>
+            <label className='text-input'>
+              <span>Puesto</span>
+              <input
+                type="text"
+                placeholder="Escriba su puesto"
+                onChange={e => setPosto(e.target.value)}
+                value={posto}
+                required
+              />
+            </label>
           </div>
         </div>
         <div className='form-footer'>
@@ -98,9 +117,8 @@ export default function Formulario(props) {
             <span>
               “Soy consciente de que Grupo Report respeta mis Datos Personales y la Ley General de Protección
               de Dados Brasileira, por lo que los datos ingresados ​​aquí serán utilizados exclusivamente para
-              gestión de inscripciones en el programa "Conexión ESG: Dias Latam", incluyendo el envío de
-              mensajes relacionados con el mismo y, y los datos se eliminarán después de la finalización del 
-              programa. Si yo me opongo a este tratamiento, no debo marcar esta opción y, en consecuencia, 
+              gestión de inscripciones en el programa "Conexión ESG: Diálogos Latam", incluyendo el envío de
+              mensajes relacionados con el mismo. Si yo me opongo a este tratamiento, no debo marcar esta opción y, en consecuencia, 
               no podré participar del programa.
             </span>
           </label>
@@ -112,7 +130,7 @@ export default function Formulario(props) {
             </span>
           </label>
 
-          <input className="button" type="submit" value="Presentar la solicitud" />
+          <input className="button" type="submit" value="¡Regístrese ahora!" />
         </div>         
       </Form>
     </Container>

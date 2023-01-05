@@ -12,7 +12,6 @@ export const Container = styled.div`
       '#1F3960'
   };
   padding: 80px;
-  font-family: 'Roboto';
 
   @media (max-width: 768px) {
       padding: 16px;
@@ -56,6 +55,7 @@ export const Form = styled.form`
     padding: 80px 40px 40px;
     display: flex;
     flex-direction: column;
+    font-family: "Roboto-Thin";
 
     label {
       display: flex;

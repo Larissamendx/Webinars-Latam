@@ -2,6 +2,7 @@ import '../styles/StylesGlobals'
 import '../styles/globals.css'
 import { ThemeProvider } from 'styled-components'
 import { CourseProvider } from '../context/CourseContext'
+import Menu from '../components/menu'
 
 const theme = {
   colors: {
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     <CourseProvider>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+        <Menu isOpen />
       </ThemeProvider>
     </CourseProvider>
   )

@@ -7,8 +7,9 @@ export default function Bola(props) {
         <h2>{props.title}</h2>
       </div>
       <div className='date'>{props.date}</div>
-      <div className='date2'>{props.date2}</div>
-      <div className='date3'>{props.date3}</div>
+      {
+        props.time.map((time, id) => <p key={id} className='time'>{time}</p>)
+      }
     </Container>
   );
 }

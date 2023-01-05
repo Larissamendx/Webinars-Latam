@@ -7,6 +7,7 @@ export const Banner = styled.div`
 	width: 100vw;
 	height: 100vh;
 	margin-bottom: 32px;
+	font-family: 'Roboto-Regular';
 
 	.shape {
 		margin-left: -900px;
@@ -39,19 +40,20 @@ export const Banner = styled.div`
 			width: 100%;
 		}
 
-		h1 {
+		h2 {
+			margin-bottom: 16px;
+		}
+
+		h1, h2 {
 			color: #82A0C4;
-			font-family: 'Roboto';
 			display: flex;
 			flex-direction: column;
-
 			span {
 				font-weight: 100;
 			}
 		}
 		p {
 			color: #9B9B9A;
-			font-family: 'Roboto';
 		}
 	}
 
