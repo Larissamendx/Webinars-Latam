@@ -12,21 +12,11 @@ import Cemefi from "../assets/cemefi.png";
 import Dnv from "../assets/dnv.png";
 import Gri from "../assets/gri-blue.svg";
 import ProCoReef from "../assets/procoreef.png";
+import Formulario from '../components/form';
 
 export default function Home() {
-  const { aboutCourses, currentCourse } = useContext(CourseContext);
+  const { aboutCourses, currentCourse} = useContext(CourseContext);
 
-  const alianza = [
-    {
-      name: "joao",
-      img: "jdashj",
-    },
-    {
-      name:"hdajsgdhsj",
-      img:"hhkhdsf"
-    }
-  ];
-  const alianzas = alianza.map(Key => {alianza.name})
   return (
     <div>
       <Banner id="presentacion">
@@ -116,6 +106,7 @@ export default function Home() {
           <a href='https://www.procoreef.com'><Image src={ProCoReef} alt="logo" /></a>
         </Logos>
       </Alianzas>
+      <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor} id="form"/>
       <Footer />
     </div>
   );

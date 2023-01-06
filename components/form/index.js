@@ -12,7 +12,6 @@ export default function Formulario(props) {
   const [pais, setPais] = useState("");
   const [empresa, setEmpresa] = useState("");
   const [posto, setPosto] = useState("");
-  const [pcurso, setPcurso] = useState("");
   const [scurso, setScurso] = useState("");
 
   const notify = () => toast.success("¡Registro completado!");
@@ -25,8 +24,7 @@ export default function Formulario(props) {
       email: email,
       pais: pais,
       empresa: empresa,
-      posto: posto,
-      pcurso: pcurso,
+      posto: posto,     
       scurso: scurso,
     };
 
@@ -46,7 +44,6 @@ export default function Formulario(props) {
           setPais("");
           setEmpresa("");
           setPosto("");
-          setPcurso("");
           setScurso("");
         },
         (error) => {

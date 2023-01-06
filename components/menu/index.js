@@ -14,7 +14,7 @@ function Menu() {
       <Panel isOpen={isOpen}>
         <Item href='#presentacion'>presentación</Item>
         <Item href='#programacion'>programación</Item>
-        <Item>inscripción</Item>
+        <Item href='#form'>inscripción</Item>
         <Item href='#report'>grupo report</Item>
         <Item href='#alianzas'>alianzas</Item>
         <Item href='https://www.cemefi.org/' target={'_blank'}>- CEMEFI</Item>
