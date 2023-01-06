@@ -52,7 +52,7 @@ export default function Formulario(props) {
 
   return (
     <Container color={props.color} id="form">
-      {/* <ToastContainer /> */}
+      <ToastContainer />
       <Form
         onSubmit={sendEmail}
         color={props.color}
@@ -148,6 +148,7 @@ export default function Formulario(props) {
           </label>
 
           <input className="button" type="submit" value="¡Regístrese ahora!" />
+          <input type="button" value="Teste Modal" onClick={() => notify()}/>
         </div>
       </Form>
     </Container>

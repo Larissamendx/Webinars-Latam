@@ -27,18 +27,18 @@ export const Panel = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 32px;
-  right: 0px;
+  right: -360px;
   top: 0px;
   width: 360px;
   height: 100vh;
   background: ${props => props.theme.colors.blue};
   transition: transform 0.5s;
 
-  transform: ${props => !props.isOpen && 'TranslateX(100%)'};
+  transform: ${props => props.isOpen && 'TranslateX(-100%)'};
 
 `
 
-export const Item = styled.button`
+export const Item = styled.a`
   background: transparent;
   font-family: 'Roboto-Medium';
   color: white;

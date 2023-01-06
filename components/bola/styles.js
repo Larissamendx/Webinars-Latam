@@ -80,7 +80,7 @@ export const Container = styled.div`
     }
   }
   h2 { 
-    font-size: 50px;
+    font-size: 40px;
     color: ${(props) => props.theme.colors[props.color]};
     padding: 0px 45px 30px 45px;
     text-align: center;

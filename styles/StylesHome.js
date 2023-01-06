@@ -75,8 +75,8 @@ export const Report = styled.div`
   margin: auto;
   padding: 70px 100px;
   background-color: #2B4A79;
-    border: 1px solid #2B4A79;
-    border-radius: 28px;
+  border: 1px solid #2B4A79;
+  border-radius: 28px;
 	margin-top: 50px;
 	margin-bottom: 50px;
 
@@ -97,4 +97,51 @@ export const Report = styled.div`
 
 `;
 export const Alianzas = styled.div`
+  background: #D8D8D8;
+  padding: 80px;
+
+  h2 {
+    color: ${props => props.theme.colors.primary};
+    font-size: 3rem;
+    padding-bottom: 24px;
+    span {
+      font-weight: 100;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    padding-bottom: 132px;
+    color: #353535;
+  }
+`
+
+export const Logos = styled.div`
+	gap: 50px;
+	display: flex;
+  flex-wrap: wrap;
+	justify-content: center;
+
+	img {
+    filter: saturate(0);
+		width: auto;
+    height: 100px;
+    transition: filter 0.3s;
+
+    :hover {
+      filter: saturate(1);
+    }
+
+		@media (max-width: 910px) {
+			width: 150px;
+		}
+		@media (max-width: 610px) {
+			width: 100px;
+			height: 100px;
+		}
+		@media (max-width: 410px) {
+			width: 50px;
+			height: 50px;
+		}
+	}
 `

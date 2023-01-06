@@ -8,10 +8,9 @@ import Cemefi from "../../assets/cemefi.png";
 export default function Logos() {
   return (
     <Container>
-      
-      <Image src={Logo2} alt="logo" />
-      <Image src={Ifrs} alt="logo" />
-      <Image src={Cemefi} alt="logo" />
+      <a href='https://www.cemefi.org/'><Image src={Cemefi} alt="logo" /></a>
+      <a href='https://www.ifrs.org/'><Image src={Ifrs} alt="logo" /></a>
+      <a href='https://www.gruporeport.com.br/'><Image src={Logo2} alt="logo" /></a>
     </Container>
   );
 }

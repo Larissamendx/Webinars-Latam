@@ -18,6 +18,7 @@ export const Banner = styled.div`
 export const Container = styled.div`
   .teste{
     padding-top: 450px;
+    padding-bottom: 132px;
     @media (max-width: 910px) {
       padding-top: 230px;
     }
@@ -36,7 +37,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${(props) => props.theme.colors[props.color]};
-    margin-top: 150px;
     padding: 50px;
 
     @media (max-width: 610px) {
@@ -81,5 +81,28 @@ export const Container = styled.div`
     @media (max-width: 520px) {
       flex-direction: column;
     }
+  }
+`
+
+export const Parceiros = styled.div`
+  background: #D8D8D8;
+  padding: 80px;
+
+  h2 {
+    color: ${(props) => props.theme.colors[props.color]};
+    font-size: 3rem;
+    padding-bottom: 24px;
+    span {
+      font-weight: 100;
+    }
+  }
+
+  h3 {
+    color: ${(props) => props.theme.colors[props.color]};
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #353535;
   }
 `

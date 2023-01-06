@@ -50,7 +50,6 @@ export const Container = styled.div`
     }
   .texto{
     margin-top: 10px;
-    font-family: 'Roboto';
     text-align: center;
     font-size: 14px;
     color: #fff;

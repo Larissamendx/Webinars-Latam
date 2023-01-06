@@ -1,13 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import Card from "../components/card";
-import { Banner, Course, Report, Alianzas } from "../styles/StylesHome";
+import { Banner, Course, Report, Alianzas, Logos } from "../styles/StylesHome";
 import Shape from "../assets/shape.png";
 import RptLogo from "../assets/logo.svg";
 import Footer from "../components/footer";
 import CourseContext from "../context/CourseContext";
 import { useContext } from "react";
-import Teste from "../assets/stevam.png";
+import Ifrs from "../assets/ifrs.svg";
+import Cemefi from "../assets/cemefi.png";
+import Dnv from "../assets/dnv.png";
+import Gri from "../assets/gri-blue.svg";
+import ProCoReef from "../assets/procoreef.png";
 
 export default function Home() {
   const { aboutCourses, currentCourse } = useContext(CourseContext);
@@ -25,7 +29,7 @@ export default function Home() {
   const alianzas = alianza.map(Key => {alianza.name})
   return (
     <div>
-      <Banner>
+      <Banner id="presentacion">
         <div className="back">
           <Image src={RptLogo} alt="logo" className="logo" />
           <Image src={Shape} alt="fundo" className="shape" priority={1} />
@@ -61,12 +65,12 @@ export default function Home() {
           </p>
         </div>
       </Banner>
-      <Course>
+      <Course id="programacion">
         {aboutCourses.map((course, id) => {
           return <Card key={id} course={course} />;
         })}
       </Course>
-      <Report>
+      <Report id="report">
         <h2>
           Grupo report <span>quienes somos</span>
         </h2>
@@ -94,7 +98,7 @@ export default function Home() {
           empresariales.
         </p>
       </Report>
-      <Alianzas>
+      <Alianzas id="alianzas">
         <h2>Alianzas</h2>
         <p>
           En esta iniciativa, el grupo report reunió aliados con abrangencia
@@ -104,7 +108,13 @@ export default function Home() {
           localidade. Conozca nuestros aliados:
         </p>
 
-        {alianzas}
+        <Logos>
+          <a href='https://www.cemefi.org/'><Image src={Cemefi} alt="logo" /></a>
+          <a href='https://www.ifrs.org/'><Image src={Ifrs} alt="logo" /></a>
+          <a href='https://www.dnv.com.br/'><Image src={Dnv} alt="logo" /></a>
+          <a href='https://www.globalreporting.org'><Image src={Gri} alt="logo" /></a>
+          <a href='https://www.procoreef.com'><Image src={ProCoReef} alt="logo" /></a>
+        </Logos>
       </Alianzas>
       <Footer />
     </div>

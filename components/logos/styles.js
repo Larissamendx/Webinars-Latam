@@ -7,6 +7,7 @@ export const Container = styled.div`
     /* opacity : 0.5; */
 
 	img {
+		width: 196px;
 		@media (max-width: 910px) {
 			width: 150px;
 		}

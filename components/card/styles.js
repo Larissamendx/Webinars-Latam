@@ -12,7 +12,7 @@ export const Container = styled.button`
 	margin: 30px 0px;
 	padding: 0px 80px;
 	border: none;
-	cursor: pointer;
+	cursor: ${(props) => !props.disabled && 'pointer'};;
 	transition: filter 0.3s;
 
 	@media (max-width: 910px) {
