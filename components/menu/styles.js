@@ -44,7 +44,7 @@ export const Item = styled.a`
   color: white;
   font-size: 24px;
   text-align: start;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: ${props => props.theme.colors.blue};
   padding: 12px 32px;
   cursor: pointer;

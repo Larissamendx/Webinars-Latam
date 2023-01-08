@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
-import evodio from "../assets/evodio.png";
+import evodio from "../assets/evodioS.jpg";
 import arturo from "../assets/arturo.jpeg";
+import Branca from "../assets/branca.jpg"
 
 const CourseContext = createContext(undefined);
 export default CourseContext;
@@ -34,6 +35,7 @@ function CourseProvider({children}) {
       date: '17.01.2023',
       time: [
         '10 a.m. Ciudad de México (MEX)',
+        '11 a.m. Bogotá (COL)',
         '01 p.m. Brasília (BRA)'
       ],
       guests: [
@@ -49,7 +51,8 @@ function CourseProvider({children}) {
           photo: arturo,
         }
         
-      ]
+      ],
+    
     },
     {
       title: 'Finanzas Sostenibles & “Sustainability-linked bonds (SBL)”',
@@ -82,14 +85,14 @@ function CourseProvider({children}) {
       ],
       guests: [
         {
-          name: 'Evodio Sánchez',
-          group: 'CEMEFI',
-          photo: evodio,
+          name: 'No está definido',
+          // group: 'CEMEFI',
+          photo: Branca,
         },
         {
-          name: 'Arturo Rodriguez',
-          group: 'IFRS',
-          photo: arturo,
+          name: 'No está definido',
+          // group: 'IFRS',
+          photo: Branca,
         }
       ]
     },

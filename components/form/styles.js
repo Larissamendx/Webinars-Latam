@@ -80,16 +80,21 @@ export const Form = styled.form`
             width: 130px;
             height: 30px;
             border-radius: 16px;
+            @media(max-width: 610px) {
+      font-size: 10px;
+      /* width: 130px; */
+          height: 40px;
+          margin-left: -10px;
+    }
           }
+
+          @media(max-width: 610px) {
+      font-size: 10px;
+      width: 230px;
+          height: 40px;
+    }
         }
-        option {
-          background-color: #e9e9e9;
-          border: 1px solid #9ba8c4;
-          font-size: 19px;
-            width: 130px;
-            height: 30px;
-            border-radius: 16px;
-          }
+  
 
         span {
           padding-left: 10px;

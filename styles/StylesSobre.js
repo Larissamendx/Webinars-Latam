@@ -88,6 +88,10 @@ export const Parceiros = styled.div`
   background: #D8D8D8;
   padding: 80px;
 
+  @media (max-width: 420px) {
+     padding: 20px;
+    }
+
   h2 {
     color: ${(props) => props.theme.colors[props.color]};
     font-size: 3rem;

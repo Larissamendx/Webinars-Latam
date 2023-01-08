@@ -27,7 +27,7 @@ export default function Sobre() {
         </div>
       </div>
       <Parceiros color={currentCourse.color}>
-        <h2>Parceiros</h2>
+        <h2>Aliados</h2>
         <h3>CEMEFI</h3>
         <p>
           Cemefi es una asociación civil mexicana fundada en 1988 y dedicada a facilitar el trabajo colaborativo 

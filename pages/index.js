@@ -7,7 +7,7 @@ import RptLogo from "../assets/logo.svg";
 import Footer from "../components/footer";
 import CourseContext from "../context/CourseContext";
 import { useContext } from "react";
-import Ifrs from "../assets/ifrs.svg";
+import Ifrs from "../assets/ifrss.svg";
 import Cemefi from "../assets/cemefi.png";
 import Dnv from "../assets/dnv.png";
 import Gri from "../assets/gri-blue.svg";
@@ -101,12 +101,12 @@ export default function Home() {
         <Logos>
           <a href='https://www.cemefi.org/'><Image src={Cemefi} alt="logo" /></a>
           <a href='https://www.ifrs.org/'><Image src={Ifrs} alt="logo" /></a>
-          <a href='https://www.dnv.com.br/'><Image src={Dnv} alt="logo" /></a>
+          {/* <a href='https://www.dnv.com.br/'><Image src={Dnv} alt="logo" /></a> */}
           <a href='https://www.globalreporting.org'><Image src={Gri} alt="logo" /></a>
           <a href='https://www.procoreef.com'><Image src={ProCoReef} alt="logo" /></a>
         </Logos>
       </Alianzas>
-      <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor} id="form"/>
+      <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor} />
       <Footer />
     </div>
   );

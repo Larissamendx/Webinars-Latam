@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { React, useState } from "react";
-// import styles from '../styles/Home.module.css';
 import emailjs from "@emailjs/browser";
 import { Container, Form } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
@@ -24,7 +23,7 @@ export default function Formulario(props) {
       email: email,
       pais: pais,
       empresa: empresa,
-      posto: posto,     
+      posto: posto,
       scurso: scurso,
     };
 
@@ -116,14 +115,17 @@ export default function Formulario(props) {
               />
             </label>
             <label>
-              <h6>Qué curso</h6>
+              <h6>Webinar</h6>
               <div className="input">
                 <select
                   name="select"
                   onChange={(e) => setScurso(e.target.value)}
                   value={scurso}
                 >
-                  <option value="Reportes ESG: Panorama, Tendencias y Metodologías" className="opt">
+                  <option
+                    value="Reportes ESG: Panorama, Tendencias y Metodologías"
+                    className="opt"
+                  >
                     Reportes ESG: Panorama, Tendencias y Metodologías
                   </option>
                   <option value="Finanzas Sostenibles & “Sustainability-linked bonds (SBL)">
@@ -152,12 +154,11 @@ export default function Formulario(props) {
             <input type="checkbox" />
             <span>
               Acepto recibir información sobre otras iniciativas y servicios del
-              grupo de informes
+              grupo report
             </span>
           </label>
 
           <input className="button" type="submit" value="¡Regístrese ahora!" />
-          {/* <input type="button" value="Teste Modal" onClick={() => notify()}/> */}
         </div>
       </Form>
     </Container>
