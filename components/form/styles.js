@@ -1,25 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-  background: ${
-    props =>  
-      props.color === 'blue' ? '#1F3960' : 
-      props.color === 'red' ? '#991010' :
-      props.color === 'cyan' ? '#08706b' :
-      props.color === 'yellow' ? '#c46009' :
-      props.color === 'purple' ? '#5e2f5e' :
-      '#1F3960'
-  };
+  background: ${(props) =>
+    props.color === "blue"
+      ? "#1F3960"
+      : props.color === "red"
+      ? "#991010"
+      : props.color === "cyan"
+      ? "#08706b"
+      : props.color === "yellow"
+      ? "#c46009"
+      : props.color === "purple"
+      ? "#5e2f5e"
+      : "#1F3960"};
   padding: 80px;
 
   @media (max-width: 768px) {
-      padding: 16px;
-    }
-`
+    padding: 16px;
+  }
+`;
 
 export const Form = styled.form`
-
   border-radius: 32px;
   overflow: hidden;
 
@@ -31,7 +32,7 @@ export const Form = styled.form`
   }
 
   .content {
-    background: #E9E9E9;
+    background: #e9e9e9;
     padding: 40px 40px 100px;
   }
   .input-container {
@@ -47,24 +48,60 @@ export const Form = styled.form`
       display: flex;
       gap: 8px;
       flex-direction: column;
-    h6 {
-      font-size: 18px;
-    font-weight: 600;
-    color: ${(props) => props.theme.colors[props.color]};
-    margin-top: 3px;
-    padding-bottom: 10px;
-    }
-    .input {
-      display: flex;
-      margin-top: -40px;
-
-      span {
-        padding-left: 10px;
+      h6 {
+        font-size: 18px;
+        font-weight: 600;
         color: ${(props) => props.theme.colors[props.color]};
+        margin-top: 3px;
+        padding-bottom: 10px;
+      }
+      .input {
+        display: flex;
+        margin-top: -40px;
+
+        select {
+          color: ${(props) => props.theme.colors[props.color]};
+          width: 430px;
+          height: 40px;
+         background-color: #e9e9e9;
+          border: 1px solid #9ba8c4;
+          font-size: 16px;
+          padding: 5px;
+          border-radius: 16px;
+
+          :hover {
+            background-color: #e9e9e9;
+            border: 1px solid #9ba8c4;
+          }
+          .opt {
+          background-color: #e9e9e9;
+          border: 1px solid #9ba8c4;
+          font-size: 19px;
+            width: 130px;
+            height: 30px;
+            border-radius: 16px;
+            @media(max-width: 610px) {
+      font-size: 10px;
+      /* width: 130px; */
+          height: 40px;
+          margin-left: -10px;
+    }
+          }
+
+          @media(max-width: 610px) {
+      font-size: 10px;
+      width: 230px;
+          height: 40px;
+    }
+        }
+  
+
+        span {
+          padding-left: 10px;
+          color: ${(props) => props.theme.colors[props.color]};
+        }
       }
     }
-    }
-    
   }
 
   .form-footer {
@@ -86,7 +123,7 @@ export const Form = styled.form`
     }
   }
   .button {
-    background: ${props => props.theme.colors[props.buttonColor]};
+    background: ${(props) => props.theme.colors[props.buttonColor]};
     font-size: 24px;
     font-weight: 600;
     color: white;
@@ -122,21 +159,22 @@ export const Form = styled.form`
 
     input {
       background: transparent;
-      border: 2px solid #9BA8C4;
+      border: 2px solid #9ba8c4;
       padding: 16px;
       border-radius: 16px;
       font-size: 18px;
       outline: none;
       color: ${(props) => props.theme.colors[props.color]};
 
-      :hover, :focus {
-        border-color: #78849E;
+      :hover,
+      :focus {
+        border-color: #78849e;
       }
 
       ::placeholder {
-        color: #9BA8C4;
+        color: #9ba8c4;
         font-size: 18px;
       }
     }
   }
-`
+`;

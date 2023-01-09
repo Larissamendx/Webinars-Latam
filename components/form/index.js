@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { React, useState } from "react";
-// import styles from '../styles/Home.module.css';
 import emailjs from "@emailjs/browser";
 import { Container, Form } from "./styles";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Formulario(props) {
   const [name, setName] = useState("");
@@ -12,12 +11,12 @@ export default function Formulario(props) {
   const [pais, setPais] = useState("");
   const [empresa, setEmpresa] = useState("");
   const [posto, setPosto] = useState("");
+  const [scurso, setScurso] = useState("");
 
   const notify = () => toast.success("¡Registro completado!");
 
   function sendEmail(e) {
     e.preventDefault();
-   
 
     const templateParams = {
       from_name: name,
@@ -25,6 +24,7 @@ export default function Formulario(props) {
       pais: pais,
       empresa: empresa,
       posto: posto,
+      scurso: scurso,
     };
 
     emailjs
@@ -43,6 +43,7 @@ export default function Formulario(props) {
           setPais("");
           setEmpresa("");
           setPosto("");
+          setScurso("");
         },
         (error) => {
           console.log(error.text);
@@ -114,15 +115,25 @@ export default function Formulario(props) {
               />
             </label>
             <label>
-            <h6>Qué curso</h6>
-            <div className="input">
-              <input type="checkbox" required />
-              <span>Reportes ESG: Panorama, Tendencias y Metodologías</span>
-              <input type="checkbox" required />
-              <span>Finanzas Sostenibles & “Sustainability-linked bonds (SBL)</span>
+              <h6>Webinar</h6>
+              <div className="input">
+                <select
+                  name="select"
+                  onChange={(e) => setScurso(e.target.value)}
+                  value={scurso}
+                >
+                  <option
+                    value="Reportes ESG: Panorama, Tendencias y Metodologías"
+                    className="opt"
+                  >
+                    Reportes ESG: Panorama, Tendencias y Metodologías
+                  </option>
+                  <option value="Finanzas Sostenibles & “Sustainability-linked bonds (SBL)">
+                    Finanzas Sostenibles & “Sustainability-linked bonds (SBL)
+                  </option>
+                </select>
               </div>
             </label>
-          
           </div>
         </div>
         <div className="form-footer">
@@ -143,12 +154,11 @@ export default function Formulario(props) {
             <input type="checkbox" />
             <span>
               Acepto recibir información sobre otras iniciativas y servicios del
-              grupo de informes
+              grupo report
             </span>
           </label>
 
           <input className="button" type="submit" value="¡Regístrese ahora!" />
-          <input type="button" value="Teste Modal" onClick={() => notify()}/>
         </div>
       </Form>
     </Container>

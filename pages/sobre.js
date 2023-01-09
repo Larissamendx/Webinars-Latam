@@ -10,8 +10,6 @@ import Image from "next/image";
 export default function Sobre() {
   const { currentCourse } = useContext(CourseContext);
 
-  console.table(currentCourse.logos);
-
   return (
     <Container color={currentCourse.color}>
       <Banner color={currentCourse.color}>

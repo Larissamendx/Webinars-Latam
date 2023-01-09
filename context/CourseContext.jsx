@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
-import evodio from "../assets/evodio.png";
+import evodio from "../assets/evodioS.jpg";
 import arturo from "../assets/arturo.jpeg";
+import Branca from "../assets/branca.jpg"
 
 //logos
 import Report from "../assets/logo2.svg";
@@ -22,6 +23,7 @@ function CourseProvider({children}) {
       date: '17.01.2023',
       time: [
         '10 a.m. Ciudad de México (MEX)',
+        '11 a.m. Bogotá (COL)',
         '01 p.m. Brasília (BRA)'
       ],
       logos: [
@@ -112,7 +114,18 @@ function CourseProvider({children}) {
           link: 'https://www.gruporeport.com.br/'
         }
       ],
-      guests: [],
+      guests: [
+        {
+          name: 'No está definido',
+          // group: 'CEMEFI',
+          photo: Branca,
+        },
+        {
+          name: 'No está definido',
+          // group: 'CEMEFI',
+          photo: Branca,
+        }
+      ],
       description: [],
       partners: [
         {

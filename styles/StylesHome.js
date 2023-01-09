@@ -38,6 +38,13 @@ export const Banner = styled.div`
 
     @media (max-width: 910px) {
       width: 100%;
+     
+    }
+
+    @media (max-width: 410px) {
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 30px;
     }
 
     h2 {
@@ -80,6 +87,10 @@ export const Report = styled.div`
 	margin-top: 50px;
 	margin-bottom: 50px;
 
+  @media(max-width: 610px) {
+    padding: 30px;
+  }
+
   h2 {
     color: #ffff;
     display: flex;
@@ -89,10 +100,17 @@ export const Report = styled.div`
     span {
       font-weight: 100;
     }
+    @media(max-width: 610px) {
+      font-size: 25px;
+    }
   }
   p {
     color: #ffff;
     font-size: 1.2rem;
+
+    @media(max-width: 610px) {
+      font-size: 10px;
+    }
   }
 
 `;
@@ -113,7 +131,16 @@ export const Alianzas = styled.div`
     font-size: 1.2rem;
     padding-bottom: 132px;
     color: #353535;
+
+    @media (max-width: 410px) {
+    padding-bottom: 30px;
+    }
   }
+  @media (max-width: 410px) {
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 30px;
+    }
 `
 
 export const Logos = styled.div`
