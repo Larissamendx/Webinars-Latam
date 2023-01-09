@@ -106,3 +106,30 @@ export const Parceiros = styled.div`
     color: #353535;
   }
 `
+
+export const Logos = styled.div`
+	gap: 50px;
+	display: flex;
+	justify-content: center;
+
+	img {
+		height: 100px;
+    width: auto;
+    transition: filter 0.3s;
+
+    :hover {
+      filter: brightness(1.3);
+    }
+		@media (max-width: 910px) {
+			width: 150px;
+		}
+		@media (max-width: 610px) {
+			width: 100px;
+			height: 100px;
+		}
+		@media (max-width: 410px) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+`
