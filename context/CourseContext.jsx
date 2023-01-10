@@ -114,18 +114,7 @@ function CourseProvider({children}) {
           link: 'https://www.gruporeport.com.br/'
         }
       ],
-      guests: [
-        {
-          name: 'No está definido',
-          // group: 'CEMEFI',
-          photo: Branca,
-        },
-        {
-          name: 'No está definido',
-          // group: 'CEMEFI',
-          photo: Branca,
-        }
-      ],
+      guests: [],
       description: [],
       partners: [
         {

@@ -45,10 +45,13 @@ export default function Sobre() {
           )
         })}
       </Parceiros>
-      <Bolinha
-        text={currentCourse.description}
-        guests={currentCourse.guests}
-      />
+      {
+        currentCourse.guests.length > 0 && 
+        <Bolinha
+          text={currentCourse.description}
+          guests={currentCourse.guests}
+        />
+      }
       <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor}/>
     </Container>
   )
