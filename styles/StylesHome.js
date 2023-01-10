@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Banner = styled.div`
   /* background-color: #82A0C4; */
   display: flex;
+  position: relative;
   flex-direction: row;
   width: 100vw;
   height: 100vh;
@@ -18,6 +19,18 @@ export const Banner = styled.div`
     display: flex;
     z-index: 10;
     margin: 100px 0 0 120px;
+  }
+
+  .logoblue {
+    width: 132px;
+    display: none;
+
+    @media (max-width: 910px) {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      display: block;
+    }
   }
 
   .back {
@@ -38,13 +51,12 @@ export const Banner = styled.div`
 
     @media (max-width: 910px) {
       width: 100%;
-     
+      text-align: center;
+      margin-top: 30px;
     }
 
-    @media (max-width: 410px) {
-      text-align: center;
+    @media (max-width: 768px) {
       padding: 10px 20px;
-      margin-top: 30px;
     }
 
     h2 {
@@ -149,6 +161,11 @@ export const Logos = styled.div`
   flex-wrap: wrap;
 	justify-content: center;
 
+  @media(max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
 	img {
     filter: saturate(0);
 		width: auto;
@@ -158,17 +175,5 @@ export const Logos = styled.div`
     :hover {
       filter: saturate(1);
     }
-
-		@media (max-width: 910px) {
-			width: 150px;
-		}
-		@media (max-width: 610px) {
-			width: 100px;
-			height: 100px;
-		}
-		@media (max-width: 410px) {
-			width: 50px;
-			height: 50px;
-		}
 	}
 `

@@ -4,6 +4,7 @@ import Card from "../components/card";
 import { Banner, Course, Report, Alianzas, Logos } from "../styles/StylesHome";
 import Shape from "../assets/shape.png";
 import RptLogo from "../assets/logo.svg";
+import RptLogoBlue from "../assets/logo3.svg";
 import Footer from "../components/footer";
 import CourseContext from "../context/CourseContext";
 import { useContext } from "react";
@@ -24,6 +25,7 @@ export default function Home() {
           <Image src={RptLogo} alt="logo" className="logo" />
           <Image src={Shape} alt="fundo" className="shape" priority={1} />
         </div>
+        <Image src={RptLogoBlue} alt="logo" className="logoblue" />
         <div className="text">
           <h1>Serie de Webinars</h1>
           <h2>

@@ -25,14 +25,14 @@ export const Panel = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 32px;
+  padding: 80px 0 32px;
   right: -360px;
   top: 0px;
   width: 360px;
   height: 100vh;
   background: ${props => props.theme.colors.blue};
   transition: transform 0.5s;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.15);
 
   transform: ${props => props.isOpen && 'TranslateX(-100%)'};
 

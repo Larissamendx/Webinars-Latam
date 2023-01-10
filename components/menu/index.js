@@ -3,6 +3,7 @@ import { Container, Button, Panel, Item } from './styles'
 import Image from "next/image";
 import menuIcon from '../../assets/menu.svg';
 import x from '../../assets/x.svg';
+import Link from 'next/link';
 
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,8 @@ function Menu() {
       <Button>
         <Image src={isOpen ? x : menuIcon } alt="Menu Button" onClick={() => setIsOpen(!isOpen)} />
       </Button>
-      <Panel isOpen={isOpen}>
+        <Panel isOpen={isOpen}>
+        <Link href={"/"}><Item href='#'>HOME</Item></Link>
         <Item href='#presentacion'>PRESENTACIÓN</Item>
         <Item href='#programacion'>PROGRAMACIÓN</Item>
         <Item href='#form'>INSCRIPCIÓN</Item>

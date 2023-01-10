@@ -22,6 +22,17 @@ export const Container = styled.button`
 		border-radius: 180px;
 		margin: 0 32px;
 	}
+
+	@media (max-width: 768px) {
+		border-radius: 64px;
+	}
+
+	@media (max-width: 640px) {
+		flex-direction: column;
+		gap: 32px;
+	}
+
+
 	@media (max-width:450px) {
 	display: flex;
 	flex-direction: column;

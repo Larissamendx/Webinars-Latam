@@ -6,13 +6,13 @@ export const Banner = styled.div`
   padding-top: 50px;
   font-family: 'Roboto-Regular';
   @media (max-width: 910px) {
-    height: 250px;
+    height: 300px;
   }
   @media (max-width: 610px) {
-    height: 200px;
+    height: 250px;
   }
   @media (max-width: 520px) {
-    height: 150px;
+    height: 200px;
   } 
 `
 export const Container = styled.div`
@@ -20,13 +20,13 @@ export const Container = styled.div`
     padding-top: 450px;
     padding-bottom: 132px;
     @media (max-width: 910px) {
-      padding-top: 230px;
+      padding-top: 330px;
     }
     @media (max-width: 610px) {
-      padding-top: 200px;
+      padding-top: 250px;
     }
     @media (max-width: 520px) {
-      padding-top: 150px;
+      padding-top: 200px;
     }
   }
   .registrese {
@@ -114,6 +114,7 @@ export const Parceiros = styled.div`
 export const Logos = styled.div`
 	gap: 50px;
 	display: flex;
+  flex-wrap: wrap;
 	justify-content: center;
 
 	img {
@@ -124,16 +125,5 @@ export const Logos = styled.div`
     :hover {
       filter: brightness(1.3);
     }
-		@media (max-width: 910px) {
-			width: 150px;
-		}
-		@media (max-width: 610px) {
-			width: 100px;
-			height: 100px;
-		}
-		@media (max-width: 410px) {
-			width: 50px;
-			height: 50px;
-		}
 	}
 `

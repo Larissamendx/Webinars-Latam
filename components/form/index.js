@@ -115,7 +115,7 @@ export default function Formulario(props) {
               />
             </label>
             <label>
-              <h6>Webinar</h6>
+              <span>Webinar</span>
               <div className="input">
                 <select
                   name="select"
@@ -124,7 +124,6 @@ export default function Formulario(props) {
                 >
                   <option
                     value="Reportes ESG: Panorama, Tendencias y Metodologías"
-                    className="opt"
                   >
                     Reportes ESG: Panorama, Tendencias y Metodologías
                   </option>
