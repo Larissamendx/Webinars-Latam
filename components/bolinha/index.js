@@ -29,14 +29,21 @@ export default function Bolinha(props) {
           </div>
           <div className='mediacionContainer'>
             <div className='linha2'>MEDIACIÓN</div>
-            <div className="imagem">
-              <Image src={Teste} alt="logo" className="logo" />
-              <div className='texto'>
-                Estevam Pereira <br />
-                Director, grupo report
-              </div>
+           
+            {
+              props.mediacion && props.mediacion.map((mediacion, id )=> {
+                return(
+                  <div className="imagem" key={id}>
+                    <Image src={mediacion.photo} href={mediacion.link} alt="guest" className="logo" />
+                    <div className='texto' href={mediacion.link}>
+                      {mediacion.name} <br />
+                      {mediacion.group}
+                    </div>
+                  </div>
+                )
+              })
+            }
             </div>
-          </div>
         </div>
       </div>
     </Container >

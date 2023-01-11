@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 import evodio from "../assets/evodioS.jpg";
 import arturo from "../assets/arturo.jpeg";
 import Branca from "../assets/branca.jpg"
+import stevam from "../assets/stevam.png";
 
 //logos
 import Report from "../assets/logo2.svg";
@@ -51,6 +52,13 @@ function CourseProvider({children}) {
           name: 'Arturo Rodríguez',
           group: 'Senior Market Leader: Ibero-America, IFRS Foundation',
           photo: arturo,
+        }
+      ],
+      mediacion: [
+        {
+          photo: stevam,
+          name:'Estevam Pereira',
+          group: 'Director, grupo report'
         }
       ],
       description: (
@@ -114,12 +122,17 @@ function CourseProvider({children}) {
           link: 'https://www.gruporeport.com.br/'
         }
       ],
+
       guests: [],
+      mediacion: [
+      
+      ],
+
       description: [],
       partners: [
         {
           name: 'ProCoReef',
-          description: ''
+          description: 'No hay información hasta ahora '
         }
       ]
     },

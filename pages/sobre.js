@@ -45,6 +45,7 @@ export default function Sobre() {
           )
         })}
       </Parceiros>
+
       {
         currentCourse.guests.length > 0 && 
         <Bolinha
@@ -52,6 +53,13 @@ export default function Sobre() {
           guests={currentCourse.guests}
         />
       }
+
+      <Bolinha
+        text={currentCourse.description}
+        guests={currentCourse.guests}
+        mediacion={currentCourse.mediacion}
+      />
+
       <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor}/>
     </Container>
   )
