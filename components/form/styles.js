@@ -48,7 +48,7 @@ export const Form = styled.form`
       display: flex;
       gap: 8px;
       flex-direction: column;
-      span {
+      h6 {
         font-size: 18px;
         font-weight: 600;
         color: ${(props) => props.theme.colors[props.color]};
@@ -57,43 +57,44 @@ export const Form = styled.form`
       }
       .input {
         display: flex;
-        font-size: 18px;
+        margin-top: -40px;
 
         select {
-          flex: 1;
           color: ${(props) => props.theme.colors[props.color]};
-          height: 57px;
+          width: 100%;
+          height: 40px;
           background-color: #e9e9e9;
-          border: 2px solid #9ba8c4;
+          border: 1px solid #9ba8c4;
           font-size: 16px;
           padding: 5px;
           border-radius: 16px;
-          outline: none;
 
-          :hover, :focus {
-            border-color: #78849e;
+          :hover {
+            background-color: #e9e9e9;
+            border: 1px solid #9ba8c4;
           }
-          option {
+          .opt {
             background-color: #e9e9e9;
             border: 1px solid #9ba8c4;
             font-size: 19px;
             width: 130px;
             height: 30px;
             border-radius: 16px;
-            @media(max-width: 610px) {
+          /* @media (max-width: 610px) {
               font-size: 10px;
               /* width: 130px; */
-              height: 40px;
+              /* height: 40px;
               margin-left: -10px;
-            }
+            } */ 
           }
 
-          @media(max-width: 610px) {
+          /* @media (max-width: 610px) {
             font-size: 10px;
             width: 230px;
             height: 40px;
-          }
+          } */
         }
+
         span {
           padding-left: 10px;
           color: ${(props) => props.theme.colors[props.color]};

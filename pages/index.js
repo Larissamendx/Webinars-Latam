@@ -4,7 +4,6 @@ import Card from "../components/card";
 import { Banner, Course, Report, Alianzas, Logos } from "../styles/StylesHome";
 import Shape from "../assets/shape.png";
 import RptLogo from "../assets/logo.svg";
-import RptLogoBlue from "../assets/logo3.svg";
 import Footer from "../components/footer";
 import CourseContext from "../context/CourseContext";
 import { useContext } from "react";
@@ -14,6 +13,7 @@ import Dnv from "../assets/dnv.png";
 import Gri from "../assets/gri-blue.svg";
 import ProCoReef from "../assets/procoreef.png";
 import Formulario from '../components/form';
+import RptLogoBlue from "../assets/logo3.svg";
 
 export default function Home() {
   const { aboutCourses, currentCourse} = useContext(CourseContext);

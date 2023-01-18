@@ -1,13 +1,16 @@
 import React, { createContext, useState } from "react";
 import evodio from "../assets/evodioS.jpg";
 import arturo from "../assets/arturo.jpeg";
-import Branca from "../assets/branca.jpg"
+import Branca from "../assets/branca.jpg";
 import stevam from "../assets/stevam.png";
+import Lila from "../assets/lila.jpeg"
 
 //logos
 import Report from "../assets/logo2.svg";
-import Ifrs from "../assets/ifrs.svg";
-import Cemefi from "../assets/cemefi.png";
+import Ifrs from "../assets/ifrss.svg";
+import Cemefi from "../assets/cemefipng.png";
+import Gri from "../assets/GRI_RGB.png";
+// import Cemefi from "../assets/cemefi.png";
 import ProCoReef from "../assets/procoreef2.svg";
 
 const CourseContext = createContext(undefined);
@@ -17,8 +20,8 @@ function CourseProvider({children}) {
   
   const aboutCourses = [
     {
-      title: 'Reportes ESG: Panorama, Tendencias y Metodologías (Standards/Doble Materialiad/Distintitvo ESG)',
-      subtitle: ' Invitados: Arturo Rodriguez (IFRS), Evodio Sánchez (CEMEFI)',
+      title: 'Reportes ESG: Panorama, Tendencias y Metodologías (Standards/Doble Materialiad/Distintitvo ESR)',
+      subtitle: ' Invitados: Arturo Rodriguez (IFRS), Evodio Sánchez (CEMEFI), Lila Carbajal (GRI)',
       color: 'blue',
       buttonColor: 'cyan',
       date: '17.01.2023',
@@ -33,20 +36,32 @@ function CourseProvider({children}) {
           link: 'https://www.cemefi.org/'
         },
         {
+          source: Gri,
+          link: 'https://www.globalreporting.org/'
+        },
+        {
           source: Ifrs,
           link: 'https://www.ifrs.org/'
         },
+      
         {
           source: Report,
           link: 'https://www.gruporeport.com.br/'
         }
       ],
+  
       guests: [
+        
         {
           name: 'Evodio Sánchez',
           group: 'Director de Responsabilidad Social Empresarial, Cemefi',
           photo: evodio,
           link: "https://www.cemefi.org/"
+        },
+        {
+          name: 'Lila Carbajal',
+          group: 'Latam Program Consultant, GRI',
+          photo: Lila,
         },
         {
           name: 'Arturo Rodríguez',
@@ -122,19 +137,10 @@ function CourseProvider({children}) {
           link: 'https://www.gruporeport.com.br/'
         }
       ],
-
       guests: [],
-      mediacion: [
-      
-      ],
-
+      mediacion: [],
       description: [],
-      partners: [
-        {
-          name: 'ProCoReef',
-          description: 'No hay información hasta ahora '
-        }
-      ]
+      partners: []
     },
     {
       title: 'Panorama y presentación de casos empresariales/sectorial',

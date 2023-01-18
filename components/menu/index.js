@@ -12,8 +12,8 @@ function Menu() {
       <Button>
         <Image src={isOpen ? x : menuIcon } alt="Menu Button" onClick={() => setIsOpen(!isOpen)} />
       </Button>
-        <Panel isOpen={isOpen}>
-        <Link href={"/"}><Item href='#'>HOME</Item></Link>
+      <Panel isOpen={isOpen}>
+        <Item href={"/"}>HOME</Item>
         <Item href='#presentacion'>PRESENTACIÓN</Item>
         <Item href='#programacion'>PROGRAMACIÓN</Item>
         <Item href='#form'>INSCRIPCIÓN</Item>

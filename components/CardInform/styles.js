@@ -25,9 +25,9 @@ export const Container = styled.a`
 		width: 400px;
 		margin-top: -60px;
 	}
-	@media (max-width: 410px) {
+	@media (max-width: 420px) {
 		width: 250px;
-		height: 80px;
+		height: 50px;
 	}
 
 	h2 { 
@@ -40,7 +40,7 @@ export const Container = styled.a`
 		@media (max-width: 610px) {
 			font-size: 18px;
 		}
-		@media (max-width: 410px) {
+		@media (max-width: 420px) {
 			font-size: 12px;
 		}
 	}

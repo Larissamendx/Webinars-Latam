@@ -3,6 +3,7 @@ import { React, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Container, Form } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Formulario(props) {
@@ -13,7 +14,8 @@ export default function Formulario(props) {
   const [posto, setPosto] = useState("");
   const [scurso, setScurso] = useState("");
 
-  const notify = () => toast.success("¡Registro completado!");
+  // const notify = () => toast.success("¡Registro completado!");
+  // const Carregar = () => toast.success("¡Aguarde!");
 
   function sendEmail(e) {
     e.preventDefault();
@@ -26,7 +28,8 @@ export default function Formulario(props) {
       posto: posto,
       scurso: scurso,
     };
-
+    
+    axios.post('https://sheet.best/api/sheets/c2271082-8e41-413c-822c-c60bdcf6bf2e', templateParams ).then((response)=>{
     emailjs
       .send(
         "gmailMessage",
@@ -37,7 +40,7 @@ export default function Formulario(props) {
       .then(
         (response) => {
           console.log(response.text, "Email enviado");
-          notify();
+          // notify();
           setEmail("");
           setName("");
           setPais("");
@@ -47,17 +50,51 @@ export default function Formulario(props) {
         },
         (error) => {
           console.log(error.text);
+        },
+        (pending) => {
+          console.log(pending.text, "Carregando");
+          Carregar();
         }
       );
+    })
+
+    const resolveWithSomeData = new Promise(resolve => setTimeout(() => resolve("world"), 3000));
+toast.promise(
+    resolveWithSomeData,
+    {
+      pending: {
+        render(){
+          return "Cargando, esperar"
+        },
+        icon: false,
+        position: "top-center",
+        theme: "colored",
+      },
+      success: {
+        render({data}){
+          return `¡Registro completado!`
+        },
+        // other options
+        icon: "🟢",
+      },
+      error: {
+        render({data}){
+          // When the promise reject, data will contains the error
+          return <MyErrorComponent message={data.message} />
+        }
+      }
+    }
+)
   }
 
   return (
     <Container color={props.color} id="form">
       <ToastContainer />
       <Form
-        onSubmit={sendEmail}
+        // onSubmit={sendEmail, Submit(e)}
         color={props.color}
         buttonColor={props.buttonColor}
+        onSubmit={sendEmail}
       >
         <div className="content">
           <h2>Formulario de inscripción</h2>
@@ -69,6 +106,7 @@ export default function Formulario(props) {
                 placeholder="Escriba su nombre"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
+                name=""
                 required
               />
             </label>
@@ -79,6 +117,7 @@ export default function Formulario(props) {
                 placeholder="Escriba su correo electrónico"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
+                name=""
                 required
               />
             </label>
@@ -115,7 +154,7 @@ export default function Formulario(props) {
               />
             </label>
             <label>
-              <span>Webinar</span>
+              <h6>Webinar</h6>
               <div className="input">
                 <select
                   name="select"
@@ -123,12 +162,18 @@ export default function Formulario(props) {
                   value={scurso}
                 >
                   <option
+                    value="Escolha um webinar"
+                    className="opt"
+                  >Escolha um webinar</option>
+                  <option
                     value="Reportes ESG: Panorama, Tendencias y Metodologías"
+                    className="opt"
                   >
                     Reportes ESG: Panorama, Tendencias y Metodologías
                   </option>
-                  <option value="Finanzas Sostenibles & “Sustainability-linked bonds (SBL)">
+                  <option value="Finanzas Sostenibles & “Sustainability-linked bonds (SBL)" className="opt">
                     Finanzas Sostenibles & “Sustainability-linked bonds (SBL)
+                    
                   </option>
                 </select>
               </div>
@@ -158,6 +203,7 @@ export default function Formulario(props) {
           </label>
 
           <input className="button" type="submit" value="¡Regístrese ahora!" />
+         
         </div>
       </Form>
     </Container>

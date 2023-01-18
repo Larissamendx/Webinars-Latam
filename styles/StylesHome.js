@@ -10,6 +10,17 @@ export const Banner = styled.div`
   margin-bottom: 32px;
   font-family: "Roboto-Regular";
 
+  .logoblue {
+    width: 132px;
+    display: none;
+    @media (max-width: 910px) {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      display: block;
+    }
+  }
+
   .shape {
     margin-left: -900px;
     /* transform: rotate(28deg); */
@@ -19,18 +30,6 @@ export const Banner = styled.div`
     display: flex;
     z-index: 10;
     margin: 100px 0 0 120px;
-  }
-
-  .logoblue {
-    width: 132px;
-    display: none;
-
-    @media (max-width: 910px) {
-      position: absolute;
-      left: 30px;
-      top: 30px;
-      display: block;
-    }
   }
 
   .back {
@@ -51,12 +50,13 @@ export const Banner = styled.div`
 
     @media (max-width: 910px) {
       width: 100%;
-      text-align: center;
-      margin-top: 30px;
+     
     }
 
-    @media (max-width: 768px) {
-      padding: 10px 20px;
+    @media (max-width: 420px) {
+      text-align: center;
+      padding: 36px 20px;
+    margin-top: 105PX;
     }
 
     h2 {
@@ -144,11 +144,11 @@ export const Alianzas = styled.div`
     padding-bottom: 132px;
     color: #353535;
 
-    @media (max-width: 410px) {
+    @media (max-width: 420px) {
     padding-bottom: 30px;
     }
   }
-  @media (max-width: 410px) {
+  @media (max-width: 420px) {
       text-align: center;
       padding: 10px 20px;
       margin-top: 30px;
@@ -161,11 +161,6 @@ export const Logos = styled.div`
   flex-wrap: wrap;
 	justify-content: center;
 
-  @media(max-width: 640px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
 	img {
     filter: saturate(0);
 		width: auto;
@@ -175,5 +170,17 @@ export const Logos = styled.div`
     :hover {
       filter: saturate(1);
     }
+
+		@media (max-width: 910px) {
+			width: 150px;
+		}
+		@media (max-width: 610px) {
+			width: 100px;
+			height: 100px;
+		}
+		@media (max-width: 420px) {
+			/* width: 50px; */
+			height: 50px;
+		}
 	}
 `

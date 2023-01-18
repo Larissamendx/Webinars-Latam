@@ -27,10 +27,11 @@ export const Container = styled.div`
       }
     }
   }
+ 
   .imagem {
     display: flex;
     flex-direction: column;
-    backgroud-repeat: no-repeat;
+    background-repeat: no-repeat;
     width: 100%;
     align-items: center;
     margin: 32px 0;
@@ -46,6 +47,10 @@ export const Container = styled.div`
       @media (max-width: 520px) {
         width: 300px;
         height: 300px;
+      }
+      @media (max-width: 420px) {
+        width: 200px;
+        height: 200px;
       }
     }
   .texto{

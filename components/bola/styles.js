@@ -12,16 +12,16 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media (max-width: 910px) {
-    width: 500px;
-    height: 500px;
-  }
-  @media (max-width: 610px) {
     width: 400px;
     height: 400px;
   }
-  @media (max-width: 520px) {
+  @media (max-width: 610px) {
     width: 300px;
     height: 300px;
+  }
+  @media (max-width: 520px) {
+    width: 200px;
+    height: 200px;
   }
 
   :after {
@@ -38,16 +38,16 @@ export const Container = styled.div`
     transform: rotate(-45deg);
 
     @media (max-width: 910px) {
-      width: 500px;
-      height: 500px;
-    }
-    @media (max-width: 610px) {
       width: 400px;
       height: 400px;
     }
-    @media (max-width: 520px) {
+    @media (max-width: 610px) {
       width: 300px;
       height: 300px;
+    }
+    @media (max-width: 520px) {
+      width: 200px;
+      height: 200px;
     }
   }
   .date {
@@ -60,7 +60,10 @@ export const Container = styled.div`
       font-size: 15px;
     }
     @media (max-width: 610px) {
-      font-size: 12px;
+      font-size: 10px;
+    }
+    @media (max-width: 520px) {
+      font-size: 7px;
     }
   }
   .time {
@@ -70,10 +73,10 @@ export const Container = styled.div`
       font-size: 15px;
     }
     @media (max-width: 610px) {
-      font-size: 14px;
+      font-size: 10px;
     }
     @media (max-width: 520px) {
-      font-size: 12px;
+      font-size: 7px;
     }
   }
   h2 { 
@@ -85,10 +88,11 @@ export const Container = styled.div`
       font-size: 25px;
     }
     @media (max-width: 610px) {
-      font-size: 22px;
+      font-size: 18px;
     }
     @media (max-width: 520px) {
-      font-size: 16px;
+      font-size: 12px;
+      padding: 0px 20px 19px 20px
     }
   }
 `

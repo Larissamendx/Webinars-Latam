@@ -6,13 +6,13 @@ export const Banner = styled.div`
   padding-top: 50px;
   font-family: 'Roboto-Regular';
   @media (max-width: 910px) {
-    height: 300px;
-  }
-  @media (max-width: 610px) {
     height: 250px;
   }
-  @media (max-width: 520px) {
+  @media (max-width: 610px) {
     height: 200px;
+  }
+  @media (max-width: 520px) {
+    height: 150px;
   } 
 `
 export const Container = styled.div`
@@ -20,13 +20,14 @@ export const Container = styled.div`
     padding-top: 450px;
     padding-bottom: 132px;
     @media (max-width: 910px) {
-      padding-top: 330px;
+      padding-top: 230px;
     }
     @media (max-width: 610px) {
-      padding-top: 250px;
+      padding-top: 200px;
     }
     @media (max-width: 520px) {
-      padding-top: 200px;
+      padding-top: 120px;
+      padding-bottom: 50px;
     }
   }
   .registrese {
@@ -49,8 +50,9 @@ export const Container = styled.div`
       @media (max-width: 610px) {
         font-size: 15px;
       }
-      @media (max-width: 410px) {
-        font-size: 10px;
+      @media (max-width: 420px) {
+        font-size: 12px;
+        text-align: center;
       }
     }
     .linha{
@@ -96,6 +98,10 @@ export const Parceiros = styled.div`
     color: ${(props) => props.theme.colors[props.color]};
     font-size: 3rem;
     padding-bottom: 24px;
+
+    @media (max-width: 420px) {
+      text-align: center;
+    }
     span {
       font-weight: 100;
     }
@@ -103,19 +109,27 @@ export const Parceiros = styled.div`
 
   h3 {
     color: ${(props) => props.theme.colors[props.color]};
+    @media (max-width: 420px) {
+      text-align: center;
+    }
   }
 
   p {
     font-size: 1.2rem;
     color: #353535;
+    @media (max-width: 420px) {
+      text-align: center;
+    }
   }
 `
 
 export const Logos = styled.div`
 	gap: 50px;
 	display: flex;
-  flex-wrap: wrap;
 	justify-content: center;
+  @media (max-width: 420px) {
+    gap: 20px;
+    }
 
 	img {
 		height: 100px;
@@ -125,5 +139,16 @@ export const Logos = styled.div`
     :hover {
       filter: brightness(1.3);
     }
+		@media (max-width: 910px) {
+			width: 150px;
+		}
+		@media (max-width: 610px) {
+			width: 100px;
+			height: 100px;
+		}
+		@media (max-width: 420px) {
+			
+			height: 50px;
+		}
 	}
 `

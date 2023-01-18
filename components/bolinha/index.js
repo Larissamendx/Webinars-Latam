@@ -16,6 +16,7 @@ export default function Bolinha(props) {
               props.guests && props.guests.map((guest, id )=> {
                 return(
                   <div className="imagem" key={id}>
+                    {/* <div className='linha'>{guest.title}</div> */}
                     <Image src={guest.photo} href={guest.link} alt="guest" className="logo" />
                     <div className='texto' href={guest.link}>
                       {guest.name} <br />

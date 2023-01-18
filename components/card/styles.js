@@ -22,26 +22,16 @@ export const Container = styled.button`
 		border-radius: 180px;
 		margin: 0 32px;
 	}
-
-	@media (max-width: 768px) {
-		border-radius: 64px;
-	}
-
-	@media (max-width: 640px) {
-		flex-direction: column;
-		gap: 32px;
-	}
-
-
 	@media (max-width:450px) {
 	display: flex;
 	flex-direction: column;
+	padding: 20px;
 
 	p, h2 {
 		text-align: center;
 	}
 	p {
-		font-size: 15px;
+		font-size: 10px;
 	}
 }
 	
@@ -62,11 +52,18 @@ export const Container = styled.button`
 		justify-content: space-between;
 		font-size: 30px;
 		font-family: 'Roboto-Bold';
+	@media (max-width:450px) {
+		font-size: 20px;
+		}
 	}
 	h2 { 
 		font-size: 30px;
 		font-weight: 500;
 		color: #ffff;
+
+	@media (max-width:450px) {
+		font-size:20px;
+	}
 	}
 
 	p {
@@ -74,6 +71,9 @@ export const Container = styled.button`
 		font-weight: 300;
 		color: #ffff;
 		margin-top: 8px;
+	@media (max-width:450px) {
+		font-size:10px;
+	}
 	}
 
 `

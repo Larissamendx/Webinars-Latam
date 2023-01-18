@@ -32,8 +32,10 @@ export default function Sobre() {
           <CardInform color={currentCourse.color}/>
         </div>
       </div>
+      {
+        currentCourse.partners.length > 0 && 
       <Parceiros color={currentCourse.color}>
-        <h2>Parceiros</h2>
+        <h2>Aliados</h2>
         {currentCourse.partners && currentCourse.partners.map((partner, id) => {
           return(
             <div>
@@ -45,21 +47,16 @@ export default function Sobre() {
           )
         })}
       </Parceiros>
-
+}
       {
         currentCourse.guests.length > 0 && 
         <Bolinha
           text={currentCourse.description}
           guests={currentCourse.guests}
+          mediacion={currentCourse.mediacion}
         />
       }
-
-      <Bolinha
-        text={currentCourse.description}
-        guests={currentCourse.guests}
-        mediacion={currentCourse.mediacion}
-      />
-
+      
       <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor}/>
     </Container>
   )
