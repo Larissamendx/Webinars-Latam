@@ -6,6 +6,7 @@ import { Banner, Container, Parceiros, Logos } from "../styles/StylesSobre";
 import CourseContext from '../context/CourseContext';
 import Formulario from '../components/form';
 import Image from "next/image";
+import RDStationForm from "../components/RDStationForm"
 
 export default function Sobre() {
   const { currentCourse } = useContext(CourseContext);
@@ -56,8 +57,8 @@ export default function Sobre() {
           mediacion={currentCourse.mediacion}
         />
       }
-      
-      <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor}/>
+      <RDStationForm />
+      {/*<Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor}/>*/}
     </Container>
   )
 }

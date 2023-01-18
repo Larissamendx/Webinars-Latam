@@ -14,6 +14,7 @@ import Gri from "../assets/gri-blue.svg";
 import ProCoReef from "../assets/procoreef.png";
 import Formulario from '../components/form';
 import RptLogoBlue from "../assets/logo3.svg";
+import RDStationForm from "../components/RDStationForm";
 
 export default function Home() {
   const { aboutCourses, currentCourse} = useContext(CourseContext);
@@ -108,7 +109,7 @@ export default function Home() {
           <a href='https://www.procoreef.com'><Image src={ProCoReef} alt="logo" /></a>
         </Logos>
       </Alianzas>
-      <Formulario color={currentCourse.color} buttonColor={currentCourse.buttonColor} />
+      <RDStationForm />
       <Footer />
     </div>
   );
